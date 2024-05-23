@@ -2,6 +2,7 @@
 
 **Please refer to [getting_started.md](getting_started.md) for examples usage.**
 
+For Linux users refer to [getting_started-linux.md](./getting_started-linux.md) to build the firmware.
 <br />
 
 # W7500x-Surf5

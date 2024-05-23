@@ -21,3 +21,12 @@ cmake -B build
 
 Finally go into the `build` directory where the files are generated
 and Run `make` to build everything.
+
+### For debugging `make` output
+
+```sh
+make > build.txt 2>&1
+```
+
+This would fill the complete output of `make` along with errors
+into the `build.txt` file inside the `build` directory.
