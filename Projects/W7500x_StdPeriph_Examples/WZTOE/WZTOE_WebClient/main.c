@@ -28,6 +28,7 @@
 #include "wizchip_conf.h"
 #include "dhcp.h"
 #include "dns.h"
+#include <string.h>
 
 /** @addtogroup W7500x_StdPeriph_Examples
  * @{
@@ -281,7 +282,7 @@ void dhcp_conflict(void)
  */
 int32_t WebClient(uint8_t sn, uint8_t* buf, uint8_t* destip, uint16_t destport)
 {
-    int32_t ret;
+    int32_t ret = 0;
     uint16_t size = 0;
     uint16_t any_port = 50000;
 
@@ -297,7 +298,7 @@ int32_t WebClient(uint8_t sn, uint8_t* buf, uint8_t* destip, uint16_t destport)
 
             setSn_IR(sn, Sn_IR_CON);
 
-            ret = send(sn, "GET /search?q=w7500x HTTP/1.1\r\n"
+            ret = send(sn, (uint8_t *)"GET /search?q=w7500x HTTP/1.1\r\n"
                     "Host: www.google.com\r\n"
                     "Connection: close\r\n"
                     "\r\n", sizeof("GET /search?q=w7500 HTTP/1.1\r\n"
@@ -317,6 +318,7 @@ int32_t WebClient(uint8_t sn, uint8_t* buf, uint8_t* destip, uint16_t destport)
             printf("%s", buf);
         }
     }
+    return -1;
 }
 
 
