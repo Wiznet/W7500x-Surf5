@@ -27,6 +27,7 @@
 #include "main.h"
 #include "wizchip_conf.h"
 #include "dhcp.h"
+#include <string.h>
 
 /** @addtogroup W7500x_StdPeriph_Examples
  * @{
