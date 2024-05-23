@@ -67,7 +67,7 @@ int main(void)
     while (1) {
         RNG_Enable(ENABLE);
         RNG_Enable(DISABLE);
-        printf("RNG : %d\r\n", RNG_GetRandomNumber() & 0x0000FFFF);
+        printf("RNG : %ld\r\n", RNG_GetRandomNumber() & 0x0000FFFF);
         Delay(800000);
     }
 	
