@@ -18,3 +18,6 @@ Open a terminal into the `W7500x-Surf5` directory :
 ```sh
 cmake -B build
 ```
+
+Finally go into the `build` directory where the files are generated
+and Run `make` to build everything.
