@@ -114,6 +114,7 @@ uint16_t ADC_GetConversionValue(void)
         adc_conversion_start = RESET;
         return (uint16_t) ADC->DATA;
     }
+    return 0;
 }
 
 /**

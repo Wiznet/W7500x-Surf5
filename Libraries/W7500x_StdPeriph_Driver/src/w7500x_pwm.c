@@ -64,7 +64,7 @@
  */
 void PWM_DeInit(PWM_TypeDef* PWMx)
 {
-    uint32_t tmpchannel;
+    uint32_t tmpchannel = PWM_Channel_0;
 
     /* Check the parameters */
     assert_param(IS_PWM_ALL_PERIPH(PWMx));

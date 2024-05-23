@@ -763,8 +763,10 @@ uipr[3] = WIZCHIP_READ((WZTOE_UIPR));
  * @param (uint8_t)ir Value to set @ref Sn_IR
  * @sa getSn_IR()
  */
+/*
 //#define setSn_IR(sn, ir) \
 //		WIZCHIP_WRITE(WZTOE_Sn_IR(sn), (ir & 0x1F))
+*/
 /**
  * @ingroup Socket_register_access_function
  * @brief Get @ref Sn_IR register
@@ -954,9 +956,11 @@ uipr[3] = WIZCHIP_READ((WZTOE_UIPR));
     WIZCHIP_WRITE((WZTOE_Sn_DHAR(sn)+0), dhar[3]); \
     WIZCHIP_WRITE((WZTOE_Sn_DHAR(sn)+5), dhar[4]); \
     WIZCHIP_WRITE((WZTOE_Sn_DHAR(sn)+4), dhar[5]); 
+/*
 //17.01.06 by justinkim
 //WIZCHIP_WRITE((WZTOE_Sn_DHAR(sn)+7), dhar[4]); \
     //WIZCHIP_WRITE((WZTOE_Sn_DHAR(sn)+6), dhar[5]); 
+*/
 
 /**
  * @ingroup Socket_register_access_function
