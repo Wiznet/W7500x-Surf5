@@ -27,6 +27,7 @@
 #include "main.h"
 #include "wizchip_conf.h"
 #include "loopback.h"
+#include <string.h>
 
 /** @addtogroup W7500x_StdPeriph_Examples
  * @{
@@ -155,7 +156,7 @@ switch(getSn_SR(sn))
 			printf("%d:recv : %s\t",sn, test_buf);
 			printf("%d:peer - %d.%d.%d.%d : %d\r\n",sn, udp_multi_dest_ip[0], udp_multi_dest_ip[1], udp_multi_dest_ip[2], udp_multi_dest_ip[3], udp_destport);
 #endif
-			if(strstr( test_buf, "end" ))
+			if(strstr( (char *)test_buf, "end" ))
 			{
 				close(sn);
 				printf("%d: SN_MR: 0x%02x\r\n", sn, getSn_MR(sn));
@@ -169,7 +170,7 @@ switch(getSn_SR(sn))
 
 				ret = sendto(sn, test_buf+sentsize, size-sentsize, udp_multi_dest_ip, udp_destport);
 #ifdef _LOOPBACK_DEBUG_
-				printf("multicast sendto %d\r\n", ret);
+				printf("multicast sendto %ld\r\n", ret);
 #endif
 				if(ret < 0)
 				{
@@ -182,6 +183,7 @@ switch(getSn_SR(sn))
 		}
 	break;
 	}
+    return -1;
 }
 /**
  * @brief  Configures the UART Peripheral.

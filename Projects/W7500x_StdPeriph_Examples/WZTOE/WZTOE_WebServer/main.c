@@ -27,6 +27,7 @@
 #include "main.h"
 #include "wizchip_conf.h"
 #include "dhcp.h"
+#include <string.h>
 
 /** @addtogroup W7500x_StdPeriph_Examples
  * @{
@@ -299,7 +300,7 @@ int32_t WebServer(uint8_t sn, uint8_t* buf, uint16_t port)
                 if (ret <= 0) return ret;
                 printf("%s", buf);
 
-                ret = send(sn, "HTTP/1.1 200 OK\r\n"
+                ret = send(sn, (uint8_t *)"HTTP/1.1 200 OK\r\n"
                         "Content-Type: text/html\r\n"
                         "Connection: close\r\n"
                         "Refresh: 5\r\n"
@@ -323,8 +324,8 @@ int32_t WebServer(uint8_t sn, uint8_t* buf, uint16_t port)
                     else if (i < 2) adcChannelOffset = 2;
                     ADC_ChannelConfig(i+adcChannelOffset);
                     ADC_StartOfConversion();
-                    sprintf(adc_buf, "analog input %d is %d<br />\r\n", i+adcChannelOffset, ADC_GetConversionValue());
-                    ret = send(sn, adc_buf, strlen(adc_buf));
+                    sprintf((char *)adc_buf, "analog input %d is %d<br />\r\n", i+adcChannelOffset, ADC_GetConversionValue());
+                    ret = send(sn, adc_buf, strlen((char *)adc_buf));
                     if (ret < 0) {
                         close(sn);
                         return ret;
@@ -333,7 +334,7 @@ int32_t WebServer(uint8_t sn, uint8_t* buf, uint16_t port)
                     memset(adc_buf, '\0', 128);
                 }
 
-                ret = send(sn, "</html>\r\n", sizeof("</html>\r\n") - 1);
+                ret = send(sn, (uint8_t *)"</html>\r\n", sizeof("</html>\r\n") - 1);
                 if (ret < 0) {
                     close(sn);
                     return ret;
