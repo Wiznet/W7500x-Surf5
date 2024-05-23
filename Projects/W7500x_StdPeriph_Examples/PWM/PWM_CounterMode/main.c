@@ -69,7 +69,7 @@ int main(void)
         new_pwm_counter = PWM_GetCounter(PWM0);
         if (old_pwm_counter != new_pwm_counter) {
             old_pwm_counter = new_pwm_counter;
-            printf("PWM_GetCounter : %d\r\n", new_pwm_counter);
+            printf("PWM_GetCounter : %ld\r\n", new_pwm_counter);
         }
     }
 	
