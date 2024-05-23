@@ -4,9 +4,9 @@ set(TARGET_NAME UART_HardwareFlowControl)
 add_executable(${TARGET_NAME}
 
   ${CMAKE_SOURCE_DIR}/Projects/W7500x_StdPeriph_Examples/UART/UART_HardwareFlowControl/main.c 
-  ${CMAKE_SOURCE_DIR}/Projects/W7500x_StdPeriph_Examples/UART/UART_HardwareFlowControl/W7500x_it.c
+  ${CMAKE_SOURCE_DIR}/Projects/W7500x_StdPeriph_Examples/UART/UART_HardwareFlowControl/w7500x_it.c
   ${CMAKE_SOURCE_DIR}/Projects/W7500x_StdPeriph_Examples/UART/UART_HardwareFlowControl/retarget.c
-  ${CMAKE_SOURCE_DIR}/Libraries/CMSIS/Device/WIZnet/W7500/Source/GCC/startup_w7500.s
+  ${CMAKE_SOURCE_DIR}/Libraries/CMSIS/Device/WIZnet/W7500/Source/GCC/startup_W7500.s
   )
 
 target_include_directories(${TARGET_NAME} PUBLIC

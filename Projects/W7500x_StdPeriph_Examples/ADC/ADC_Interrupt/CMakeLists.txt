@@ -4,9 +4,9 @@ set(TARGET_NAME ADC_Interrupt)
 add_executable(${TARGET_NAME}
 
   ${CMAKE_SOURCE_DIR}/Projects/W7500x_StdPeriph_Examples/ADC/ADC_Interrupt/main.c 
-  ${CMAKE_SOURCE_DIR}/Projects/W7500x_StdPeriph_Examples/ADC/ADC_Interrupt/W7500x_it.c
+  ${CMAKE_SOURCE_DIR}/Projects/W7500x_StdPeriph_Examples/ADC/ADC_Interrupt/w7500x_it.c
   ${CMAKE_SOURCE_DIR}/Projects/W7500x_StdPeriph_Examples/ADC/ADC_Interrupt/retarget.c
-  ${CMAKE_SOURCE_DIR}/Libraries/CMSIS/Device/WIZnet/W7500/Source/GCC/startup_w7500.s
+  ${CMAKE_SOURCE_DIR}/Libraries/CMSIS/Device/WIZnet/W7500/Source/GCC/startup_W7500.s
   )
 
 target_include_directories(${TARGET_NAME} PUBLIC

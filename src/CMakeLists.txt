@@ -5,9 +5,9 @@ set(TARGET_NAME src)
 add_executable(${TARGET_NAME}
 
   ${CMAKE_SOURCE_DIR}/src/main.c 
-  ${CMAKE_SOURCE_DIR}/src/W7500x_it.c
+  ${CMAKE_SOURCE_DIR}/src/w7500x_it.c
   ${CMAKE_SOURCE_DIR}/src/retarget.c
-  ${CMAKE_SOURCE_DIR}/Libraries/CMSIS/Device/WIZnet/W7500/Source/GCC/startup_w7500.s
+  ${CMAKE_SOURCE_DIR}/Libraries/CMSIS/Device/WIZnet/W7500/Source/GCC/startup_W7500.s
   )
 
 target_include_directories(${TARGET_NAME} PUBLIC

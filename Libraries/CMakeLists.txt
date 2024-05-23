@@ -4,7 +4,7 @@
 add_library(SYSTEM_W7500X_FILES STATIC)
 
 target_sources(SYSTEM_W7500X_FILES PUBLIC
-        ${CMAKE_SOURCE_DIR}/Libraries/CMSIS/Device/WIZnet/W7500/Source/system_W7500x.c
+        ${CMAKE_SOURCE_DIR}/Libraries/CMSIS/Device/WIZnet/W7500/Source/system_w7500x.c
         )
 
 target_include_directories(SYSTEM_W7500X_FILES PUBLIC
@@ -22,7 +22,7 @@ target_sources(GPIO_FILES PUBLIC
         )
 
 target_include_directories(GPIO_FILES PUBLIC
-        ${CMAKE_SOURCE_DIR}/Libraries/W7500x_stdPeriph_Driver/inc
+        ${CMAKE_SOURCE_DIR}/Libraries/W7500x_StdPeriph_Driver/inc
         )
 target_link_libraries(GPIO_FILES PUBLIC
         SYSTEM_W7500X_FILES
@@ -32,11 +32,11 @@ target_link_libraries(GPIO_FILES PUBLIC
 add_library(UART_FILES STATIC)
 
 target_sources(UART_FILES PUBLIC
-        ${CMAKE_SOURCE_DIR}/Libraries/W7500x_stdPeriph_Driver/src/W7500x_uart.c
+        ${CMAKE_SOURCE_DIR}/Libraries/W7500x_StdPeriph_Driver/src/w7500x_uart.c
         )
 
 target_include_directories(UART_FILES PUBLIC
-        ${CMAKE_SOURCE_DIR}/Libraries/W7500x_stdPeriph_Driver/inc
+        ${CMAKE_SOURCE_DIR}/Libraries/W7500x_StdPeriph_Driver/inc
         )
 
 target_link_libraries(UART_FILES PUBLIC
@@ -49,11 +49,11 @@ target_link_libraries(UART_FILES PUBLIC
 add_library(ADC_FILES STATIC)
 
 target_sources(ADC_FILES PUBLIC
-        ${CMAKE_SOURCE_DIR}/Libraries/W7500x_stdPeriph_Driver/src/w7500x_adc.c
+        ${CMAKE_SOURCE_DIR}/Libraries/W7500x_StdPeriph_Driver/src/w7500x_adc.c
         )
 
 target_include_directories(ADC_FILES PUBLIC
-        ${CMAKE_SOURCE_DIR}/Libraries/W7500x_stdPeriph_Driver/inc
+        ${CMAKE_SOURCE_DIR}/Libraries/W7500x_StdPeriph_Driver/inc
         )
 
 target_link_libraries(ADC_FILES PUBLIC
@@ -64,11 +64,11 @@ target_link_libraries(ADC_FILES PUBLIC
 add_library(CRG_FILES STATIC)
 
 target_sources(CRG_FILES PUBLIC
-${CMAKE_SOURCE_DIR}/Libraries/W7500x_stdPeriph_Driver/src/w7500x_crg.c
+${CMAKE_SOURCE_DIR}/Libraries/W7500x_StdPeriph_Driver/src/w7500x_crg.c
         )
 
 target_include_directories(CRG_FILES PUBLIC
-${CMAKE_SOURCE_DIR}/Libraries/W7500x_stdPeriph_Driver/inc
+${CMAKE_SOURCE_DIR}/Libraries/W7500x_StdPeriph_Driver/inc
         )
 
 target_link_libraries(CRG_FILES PUBLIC
@@ -79,11 +79,11 @@ target_link_libraries(CRG_FILES PUBLIC
 add_library(DUALTIMER_FILES STATIC)
 
 target_sources(DUALTIMER_FILES PUBLIC
-${CMAKE_SOURCE_DIR}/Libraries/W7500x_stdPeriph_Driver/src/w7500x_dualtimer.c
+${CMAKE_SOURCE_DIR}/Libraries/W7500x_StdPeriph_Driver/src/w7500x_dualtimer.c
         )
 
 target_include_directories(DUALTIMER_FILES PUBLIC
-${CMAKE_SOURCE_DIR}/Libraries/W7500x_stdPeriph_Driver/inc
+${CMAKE_SOURCE_DIR}/Libraries/W7500x_StdPeriph_Driver/inc
         )
 
 target_link_libraries(DUALTIMER_FILES PUBLIC
@@ -95,11 +95,11 @@ target_link_libraries(DUALTIMER_FILES PUBLIC
 add_library(EXTI_FILES STATIC)
 
 target_sources(EXTI_FILES PUBLIC
-${CMAKE_SOURCE_DIR}/Libraries/W7500x_stdPeriph_Driver/src/w7500x_exti.c
+${CMAKE_SOURCE_DIR}/Libraries/W7500x_StdPeriph_Driver/src/w7500x_exti.c
         )
 
 target_include_directories(EXTI_FILES PUBLIC
-${CMAKE_SOURCE_DIR}/Libraries/W7500x_stdPeriph_Driver/inc
+${CMAKE_SOURCE_DIR}/Libraries/W7500x_StdPeriph_Driver/inc
         )
 
 target_link_libraries(EXTI_FILES PUBLIC
@@ -111,11 +111,11 @@ target_link_libraries(EXTI_FILES PUBLIC
 add_library(FLASH_FILES STATIC)
 
 target_sources(FLASH_FILES PUBLIC
-${CMAKE_SOURCE_DIR}/Libraries/W7500x_stdPeriph_Driver/src/w7500x_flash.c
+${CMAKE_SOURCE_DIR}/Libraries/W7500x_StdPeriph_Driver/src/w7500x_flash.c
         )
 
 target_include_directories(FLASH_FILES PUBLIC
-${CMAKE_SOURCE_DIR}/Libraries/W7500x_stdPeriph_Driver/inc
+${CMAKE_SOURCE_DIR}/Libraries/W7500x_StdPeriph_Driver/inc
         )
 
 target_link_libraries(FLASH_FILES PUBLIC
@@ -126,11 +126,11 @@ target_link_libraries(FLASH_FILES PUBLIC
 add_library(MIIM_FILES STATIC)
 
 target_sources(MIIM_FILES PUBLIC
-${CMAKE_SOURCE_DIR}/Libraries/W7500x_stdPeriph_Driver/src/w7500x_miim.c
+${CMAKE_SOURCE_DIR}/Libraries/W7500x_StdPeriph_Driver/src/w7500x_miim.c
         )
 
 target_include_directories(MIIM_FILES PUBLIC
-${CMAKE_SOURCE_DIR}/Libraries/W7500x_stdPeriph_Driver/inc
+${CMAKE_SOURCE_DIR}/Libraries/W7500x_StdPeriph_Driver/inc
         )
 
 target_link_libraries(MIIM_FILES PUBLIC
@@ -142,11 +142,11 @@ target_link_libraries(MIIM_FILES PUBLIC
 add_library(MISC_FILES STATIC)
 
 target_sources(MISC_FILES PUBLIC
-${CMAKE_SOURCE_DIR}/Libraries/W7500x_stdPeriph_Driver/src/w7500x_misc.c
+${CMAKE_SOURCE_DIR}/Libraries/W7500x_StdPeriph_Driver/src/w7500x_misc.c
         )
 
 target_include_directories(MISC_FILES PUBLIC
-${CMAKE_SOURCE_DIR}/Libraries/W7500x_stdPeriph_Driver/inc
+${CMAKE_SOURCE_DIR}/Libraries/W7500x_StdPeriph_Driver/inc
         )
 
 target_link_libraries(MISC_FILES PUBLIC
@@ -157,11 +157,11 @@ target_link_libraries(MISC_FILES PUBLIC
 add_library(PWM_FILES STATIC)
 
 target_sources(PWM_FILES PUBLIC
-        ${CMAKE_SOURCE_DIR}/Libraries/W7500x_stdPeriph_Driver/src/w7500x_pwm.c
+        ${CMAKE_SOURCE_DIR}/Libraries/W7500x_StdPeriph_Driver/src/w7500x_pwm.c
         )
 
 target_include_directories(PWM_FILES PUBLIC
-        ${CMAKE_SOURCE_DIR}/Libraries/W7500x_stdPeriph_Driver/inc
+        ${CMAKE_SOURCE_DIR}/Libraries/W7500x_StdPeriph_Driver/inc
         )
 
 target_link_libraries(PWM_FILES PUBLIC
@@ -173,11 +173,11 @@ target_link_libraries(PWM_FILES PUBLIC
 add_library(RNG_FILES STATIC)
 
 target_sources(RNG_FILES PUBLIC
-        ${CMAKE_SOURCE_DIR}/Libraries/W7500x_stdPeriph_Driver/src/w7500x_rng.c
+        ${CMAKE_SOURCE_DIR}/Libraries/W7500x_StdPeriph_Driver/src/w7500x_rng.c
         )
 
 target_include_directories(RNG_FILES PUBLIC
-        ${CMAKE_SOURCE_DIR}/Libraries/W7500x_stdPeriph_Driver/inc
+        ${CMAKE_SOURCE_DIR}/Libraries/W7500x_StdPeriph_Driver/inc
         )
 
 target_link_libraries(RNG_FILES PUBLIC
@@ -188,11 +188,11 @@ target_link_libraries(RNG_FILES PUBLIC
 add_library(RTC_FILES STATIC)
 
 target_sources(RTC_FILES PUBLIC
-        ${CMAKE_SOURCE_DIR}/Libraries/W7500x_stdPeriph_Driver/src/w7500x_rtc.c
+        ${CMAKE_SOURCE_DIR}/Libraries/W7500x_StdPeriph_Driver/src/w7500x_rtc.c
         )
 
 target_include_directories(RTC_FILES PUBLIC
-        ${CMAKE_SOURCE_DIR}/Libraries/W7500x_stdPeriph_Driver/inc
+        ${CMAKE_SOURCE_DIR}/Libraries/W7500x_StdPeriph_Driver/inc
         )
 
 target_link_libraries(RTC_FILES PUBLIC
@@ -203,11 +203,11 @@ target_link_libraries(RTC_FILES PUBLIC
 add_library(SSP_FILES STATIC)
 
 target_sources(SSP_FILES PUBLIC
-        ${CMAKE_SOURCE_DIR}/Libraries/W7500x_stdPeriph_Driver/src/w7500x_ssp.c
+        ${CMAKE_SOURCE_DIR}/Libraries/W7500x_StdPeriph_Driver/src/w7500x_ssp.c
         )
 
 target_include_directories(SSP_FILES PUBLIC
-        ${CMAKE_SOURCE_DIR}/Libraries/W7500x_stdPeriph_Driver/inc
+        ${CMAKE_SOURCE_DIR}/Libraries/W7500x_StdPeriph_Driver/inc
         )
 
 target_link_libraries(SSP_FILES PUBLIC
@@ -218,11 +218,11 @@ target_link_libraries(SSP_FILES PUBLIC
 add_library(WDT_FILES STATIC)
 
 target_sources(WDT_FILES PUBLIC
-        ${CMAKE_SOURCE_DIR}/Libraries/W7500x_stdPeriph_Driver/src/w7500x_wdt.c
+        ${CMAKE_SOURCE_DIR}/Libraries/W7500x_StdPeriph_Driver/src/w7500x_wdt.c
         )
 
 target_include_directories(WDT_FILES PUBLIC
-        ${CMAKE_SOURCE_DIR}/Libraries/W7500x_stdPeriph_Driver/inc
+        ${CMAKE_SOURCE_DIR}/Libraries/W7500x_StdPeriph_Driver/inc
         )
 
 target_link_libraries(WDT_FILES PUBLIC
@@ -234,11 +234,11 @@ target_link_libraries(WDT_FILES PUBLIC
 add_library(WZTOE_FILES STATIC)
 
 target_sources(WZTOE_FILES PUBLIC
-        ${CMAKE_SOURCE_DIR}/Libraries/W7500x_stdPeriph_Driver/src/w7500x_wztoe.c
+        ${CMAKE_SOURCE_DIR}/Libraries/W7500x_StdPeriph_Driver/src/w7500x_wztoe.c
         )
 
 target_include_directories(WZTOE_FILES PUBLIC
-        ${CMAKE_SOURCE_DIR}/Libraries/W7500x_stdPeriph_Driver/inc
+        ${CMAKE_SOURCE_DIR}/Libraries/W7500x_StdPeriph_Driver/inc
         )
 
 target_link_libraries(WZTOE_FILES PUBLIC

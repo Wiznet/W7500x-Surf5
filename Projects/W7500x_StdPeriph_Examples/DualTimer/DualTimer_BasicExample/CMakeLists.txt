@@ -4,9 +4,9 @@ set(TARGET_NAME DualTimer_BasicExample)
 add_executable(${TARGET_NAME}
 
   ${CMAKE_SOURCE_DIR}/Projects/W7500x_StdPeriph_Examples/DualTimer/DualTimer_BasicExample/main.c 
-  ${CMAKE_SOURCE_DIR}/Projects/W7500x_StdPeriph_Examples/DualTimer/DualTimer_BasicExample/W7500x_it.c
+  ${CMAKE_SOURCE_DIR}/Projects/W7500x_StdPeriph_Examples/DualTimer/DualTimer_BasicExample/w7500x_it.c
   ${CMAKE_SOURCE_DIR}/Projects/W7500x_StdPeriph_Examples/DualTimer/DualTimer_BasicExample/retarget.c
-  ${CMAKE_SOURCE_DIR}/Libraries/CMSIS/Device/WIZnet/W7500/Source/GCC/startup_w7500.s
+  ${CMAKE_SOURCE_DIR}/Libraries/CMSIS/Device/WIZnet/W7500/Source/GCC/startup_W7500.s
   )
 
 target_include_directories(${TARGET_NAME} PUBLIC
