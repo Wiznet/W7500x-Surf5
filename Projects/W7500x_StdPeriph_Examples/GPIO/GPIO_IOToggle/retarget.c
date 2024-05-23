@@ -125,7 +125,7 @@ void UartPuts(UART_TypeDef* UARTx, uint8_t *str)
         if (ch != (uint8_t) 0x0) {
             UartPutc(UARTx, ch);
         }
-        *str++;
+        (void)*str++;
     } while (ch != 0);
 }
 
@@ -153,7 +153,7 @@ void S_UartPuts(uint8_t *str)
         if (ch != (uint8_t) 0x0) {
             S_UART_SendData(ch);
         }
-        *str++;
+        (void)*str++;
     } while (ch != 0);
 }
 
