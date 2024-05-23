@@ -70,7 +70,7 @@
 //
 //*****************************************************************************
 #include "socket.h"
-#include "W7500x_wztoe.h"
+#include "w7500x_wztoe.h"
 
 #define SOCK_ANY_PORT_NUM  (0xC000) //M20160411
 
