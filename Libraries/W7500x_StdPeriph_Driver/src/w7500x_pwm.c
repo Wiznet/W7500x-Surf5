@@ -64,7 +64,7 @@
  */
 void PWM_DeInit(PWM_TypeDef* PWMx)
 {
-    uint32_t tmpchannel = PWM_Channel_0;
+    uint32_t tmpchannel = 0;
 
     /* Check the parameters */
     assert_param(IS_PWM_ALL_PERIPH(PWMx));
@@ -77,6 +77,7 @@ void PWM_DeInit(PWM_TypeDef* PWMx)
     else if (PWMx == PWM5) tmpchannel = PWM_Channel_5;
     else if (PWMx == PWM6) tmpchannel = PWM_Channel_6;
     else if (PWMx == PWM7) tmpchannel = PWM_Channel_7;
+    else return;
 
     PWM->SSR &= ~tmpchannel;            // Start Stop register
     PWM->PSR &= ~tmpchannel;            // Pause register
@@ -164,7 +165,7 @@ void PWM_StructInit(PWM_InitTypeDef* PWM_InitStruct)
  */
 void PWM_Cmd(PWM_TypeDef* PWMx, FunctionalState NewState)
 {
-    uint32_t tmpchannel;
+    uint32_t tmpchannel = 0;
 
     /* Check the parameters */
     assert_param(IS_PWM_ALL_PERIPH(PWMx));
@@ -177,6 +178,7 @@ void PWM_Cmd(PWM_TypeDef* PWMx, FunctionalState NewState)
     else if (PWMx == PWM5) tmpchannel = PWM_Channel_5;
     else if (PWMx == PWM6) tmpchannel = PWM_Channel_6;
     else if (PWMx == PWM7) tmpchannel = PWM_Channel_7;
+    else return;
 
     if (NewState != DISABLE) {
         PWM->SSR |= tmpchannel;
@@ -197,7 +199,7 @@ void PWM_Cmd(PWM_TypeDef* PWMx, FunctionalState NewState)
  */
 void PWM_Pause(PWM_TypeDef* PWMx, FunctionalState NewState)
 {
-    uint32_t tmpchannel;
+    uint32_t tmpchannel = 0;
 
     /* Check the parameters */
     assert_param(IS_PWM_ALL_PERIPH(PWMx));
@@ -210,6 +212,7 @@ void PWM_Pause(PWM_TypeDef* PWMx, FunctionalState NewState)
     else if (PWMx == PWM5) tmpchannel = PWM_Channel_5;
     else if (PWMx == PWM6) tmpchannel = PWM_Channel_6;
     else if (PWMx == PWM7) tmpchannel = PWM_Channel_7;
+    else return;
 
     if (NewState != DISABLE) {
         PWM->PSR |= tmpchannel;
@@ -259,7 +262,7 @@ uint32_t PWM_GetCounter(PWM_TypeDef* PWMx)
  */
 void PWM_ITConfig(PWM_TypeDef* PWMx, uint32_t PWM_IT, FunctionalState NewState)
 {
-    uint32_t tmpchannel;
+    uint32_t tmpchannel = 0;
 
     /* Check the parameters */
     assert_param(IS_PWM_ALL_PERIPH(PWMx));
@@ -273,6 +276,7 @@ void PWM_ITConfig(PWM_TypeDef* PWMx, uint32_t PWM_IT, FunctionalState NewState)
     else if (PWMx == PWM5) tmpchannel = PWM_Channel_5;
     else if (PWMx == PWM6) tmpchannel = PWM_Channel_6;
     else if (PWMx == PWM7) tmpchannel = PWM_Channel_7;
+    else return;
 
     if (NewState != DISABLE) {
         PWM->IER |= tmpchannel;
