@@ -217,7 +217,7 @@ void PWM0_Handler(void)
     }
     if (PWM_GetITStatus(PWM0, PWM_IT_CI) == SET) {
         PWM_ClearITPendingBit(PWM0, PWM_IT_CI);
-        printf("PWM_GetCapture : %d\r\n", PWM_GetCapture(PWM0));
+        printf("PWM_GetCapture : %ld\r\n", PWM_GetCapture(PWM0));
     }
 }
 
