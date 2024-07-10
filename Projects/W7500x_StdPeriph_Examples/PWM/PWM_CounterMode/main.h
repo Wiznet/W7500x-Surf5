@@ -1,6 +1,6 @@
 /**
  ******************************************************************************
- * @file    ADC/ADC_Interrupt/main.h
+ * @file    PWM/PWM_CounterMode/main.h
  * @author  WIZnet
  * @brief   Header for main.c module
  ******************************************************************************

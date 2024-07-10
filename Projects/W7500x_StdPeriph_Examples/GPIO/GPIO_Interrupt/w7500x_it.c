@@ -164,10 +164,10 @@ void PORT1_Handler(void)
  */
 void PORT2_Handler(void)
 {
-    if (GPIO_GetITStatus(GPIOC, GPIO_Pin_6) == SET) {
-		GPIO_ToggleBits(GPIOC,GPIO_Pin_5);
-        printf("PC_06 Pushed\r\n");
-		GPIO_ClearITPendingPin(GPIOC, GPIO_Pin_6);
+    if (GPIO_GetITStatus(GPIOC, GPIO_Pin_4) == SET) {
+		GPIO_ToggleBits(GPIOC,GPIO_Pin_15);
+        printf("PC_04 Pushed\r\n");
+		GPIO_ClearITPendingPin(GPIOC, GPIO_Pin_4);
     }
 }
 

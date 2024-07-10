@@ -1,6 +1,6 @@
 /**
  ******************************************************************************
- * @file    ADC/ADC_Interrupt/main.h
+ * @file    WZTOE/WZTOE_WebClient/main.h
  * @author  WIZnet
  * @brief   Header for main.c module
  ******************************************************************************

@@ -1,6 +1,6 @@
 /**
  ******************************************************************************
- * @file    ADC/ADC_Interrupt/main.h
+ * @file    ADC/RNG_BasicExample/main.h
  * @author  WIZnet
  * @brief   Header for main.c module
  ******************************************************************************

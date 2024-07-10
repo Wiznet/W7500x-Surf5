@@ -110,17 +110,17 @@ static void GPIO_Config(void)
     GPIO_InitStructure.GPIO_AF = PAD_AF1;
     GPIO_Init(GPIOC, &GPIO_InitStructure);
 
-    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_6;
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_4;
     GPIO_InitStructure.GPIO_Direction = GPIO_Direction_IN;
-    GPIO_InitStructure.GPIO_Pad = GPIO_InputBufferEnable | GPIO_CMOS | GPIO_PuPd_DOWN;
+    GPIO_InitStructure.GPIO_Pad = GPIO_InputBufferEnable | GPIO_CMOS | GPIO_PuPd_UP;
     GPIO_InitStructure.GPIO_AF = PAD_AF1;
     GPIO_Init(GPIOC, &GPIO_InitStructure);
 
-    GPIO_ITInitStructure.GPIO_IT_Pin = GPIO_Pin_6;
+    GPIO_ITInitStructure.GPIO_IT_Pin = GPIO_Pin_4;
     GPIO_ITInitStructure.GPIO_IT_Polarity = GPIO_IT_HighRising;
     GPIO_ITInitStructure.GPIO_IT_Type = GPIO_IT_Edge;
     GPIO_IT_Init(GPIOC, &GPIO_ITInitStructure);
-    GPIO_ITConfig(GPIOC, GPIO_Pin_6, ENABLE);
+    GPIO_ITConfig(GPIOC, GPIO_Pin_4, ENABLE);
 
     NVIC_InitStructure.NVIC_IRQChannel = PORT2_IRQn;
     NVIC_InitStructure.NVIC_IRQChannelPriority = 0x0;
